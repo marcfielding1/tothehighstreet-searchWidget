@@ -41,8 +41,8 @@ class App extends Component {
     const { steps, run, tourDecision } = this.state;
     return (
       <div className="App">
-        <Container className="mainContainer align-items-center">
-          <Container>
+        <Container className="outer-container align-items-center">
+          <Container className="inner-container">
             <Jumbotron className="intro-jumbotron">
               <Row className="justify-content-center">
                 <Image className="logo" src={Logo} roundedCircle />

@@ -34,24 +34,33 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <Row>
-        { this.state.shops.map((item, index) => (
+      <div>
+        <Row className="align-items-center select-button">
+          <Button variant="primary">Search All Shops</Button>
+        </Row>
 
-          <Col key={index} sm={4} className="mx-auto shop-list-card">
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src={Logo} />
-              <Card.Body>
-                <Card.Title>{item.shopName}</Card.Title>
-                <Card.Text>
-                  {item.shopBlurb}
-                </Card.Text>
-                <Button variant="primary" onClick>SELECT</Button>
-              </Card.Body>
-            </Card>
-          </Col>
+        <Row className="align-items-center select-button">
+          <p> Or select a shop from the list to only search that particular shop</p>
+        </Row>
+        <Row>
+          { this.state.shops.map((item, index) => (
 
-        ))}
-      </Row>
+            <Col key={index} sm={4} className="mx-auto shop-list-card">
+              <Card style={{ width: '18rem' }}>
+                <Card.Img variant="top" src={Logo} />
+                <Card.Body>
+                  <Card.Title>{item.shopName}</Card.Title>
+                  <Card.Text>
+                    {item.shopBlurb}
+                  </Card.Text>
+                  <Button variant="primary">SELECT</Button>
+                </Card.Body>
+              </Card>
+            </Col>
+
+          ))}
+        </Row>
+      </div>
 
     );
   }

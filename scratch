@@ -11,7 +11,7 @@ body > #root > div {
   height: 100vh;
 }
 
-.outer-container {
+.mainContainer {
   height: 100vh;
   display: flex;
 }
@@ -19,9 +19,6 @@ body > #root > div {
 .logo {
   margin-bottom: 20px;
   width: 100px;
-  height: auto;
-  max-width: 100px;
-  max-height: 100px;
 }
 
 .intro-jumbotron {
@@ -36,14 +33,4 @@ body > #root > div {
 
   margin: auto;
   width: 100px !important;
-}
-
-.select-button {
-  display:flex;
-  justify-content:center;
-  align-items:center
-}
-
-.inner-container {
-  max-height: 100vh;
 }
