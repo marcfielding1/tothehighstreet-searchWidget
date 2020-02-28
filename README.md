@@ -25,9 +25,7 @@ $the_query = new WP_Query( array( 'posts_per_page' => -1, 's' => esc_attr( $_POS
 
 v1.0
 
-Once the product data is in elastic we need to spin up a t2.nano EC2 instance and write a small NodeAPI to sit there and query elasticSearch for us.
-
-The reason we're not using AWS Lambda is because if you're typing every keypress could in theory cause the Lambda API to fan out, that is to say under load we could end up with hundreds of concurrent executions in Lambda which in the long run will be more expensive.
+Lambda API to query MongoDB (because the geo search is better) - the front end will debounce requests so that every keypress doesn't result in an api call, at $0.50 per million requests it's cheap, like the budgie.
 
 # Testing
 
