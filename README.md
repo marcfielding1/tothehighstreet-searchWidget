@@ -3,7 +3,7 @@ Custom search widget to pull product data from elasticSearch
 
 # Overview
 
-This custom search widget is to allow customers on mobile and desktop to get a uniform search experience - currently our wordpress theme doesn't pull categories when on mobile and the category dropdown is too big. Categories in our case are actually Shops, so we do want users to be able to search in a specific shop easily.
+This custom search widget is to allow customers on mobile and desktop to get a uniform search experience - currently our wordpress theme doesn't pull categories when on mobile and the category dropdown is too big. Categories in our case are actually shops, so we do want users to be able to search in a specific shop easily.
 
 The widget will have the following states.
 
@@ -27,4 +27,4 @@ v1.0
 
 Once the product data is in elastic we need to spin up a t2.nano EC2 instance and write a small NodeAPI to sit there and query elasticSearch for us.
 
-The reason we're using AWS Lambda is because if you're typing every keypress could in theory cause the Lambda API to fan out, that is to say under load we could end up with hundreds of concurrent executions in Lambda which in the long run will be more expensive.
+The reason we're not using AWS Lambda is because if you're typing every keypress could in theory cause the Lambda API to fan out, that is to say under load we could end up with hundreds of concurrent executions in Lambda which in the long run will be more expensive.
