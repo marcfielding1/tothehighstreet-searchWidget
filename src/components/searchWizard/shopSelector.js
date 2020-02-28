@@ -18,7 +18,7 @@ class SearchBar extends Component {
     return (
       <div>
         <Row className="align-items-center select-button">
-          <Button variant="primary">Search All Shops</Button>
+          <Button id="allShops" variant="primary">Search All Shops</Button>
         </Row>
 
         <Row className="align-items-center select-button">
@@ -28,14 +28,14 @@ class SearchBar extends Component {
           { this.props.shops.map((item, index) => (
 
             <Col key={index} sm={4} className="mx-auto shop-list-card">
-              <Card style={{ width: '18rem' }}>
+              <Card className="shop-card" style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={Logo} />
                 <Card.Body>
                   <Card.Title>{item.shopName}</Card.Title>
                   <Card.Text>
                     {item.shopBlurb}
                   </Card.Text>
-                  <Button variant="primary">SELECT</Button>
+                  <Button id="selectShop" variant="primary">SELECT</Button>
                 </Card.Body>
               </Card>
             </Col>

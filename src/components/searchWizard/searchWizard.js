@@ -31,12 +31,16 @@ class SearchWizard extends Component {
     };
   }
 
+  selectShop(index) {
+    this.setState({ searchShop: index });
+  }
+
 
   render() {
     let component;
 
     if (this.state.searchShop === null) {
-      component = <ShopSelector shops={this.state.shops} />;
+      component = <ShopSelector shops={this.state.shops} selectShop={this.selectShop.bind(this)} />;
     }
 
     return (

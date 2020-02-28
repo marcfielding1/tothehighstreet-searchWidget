@@ -48,3 +48,6 @@ body > #root > div {
   align-items:center
 }
 
+.shop-card {
+  padding: 1rem;
+}

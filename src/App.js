@@ -19,9 +19,19 @@ class App extends Component {
       run: false,
       steps: [
         {
-          target: '#startButton',
+          target: '#allShops',
           content:
-            'Initially you can chose to either search within a specific shop or items across all shops, choose one now to continue.',
+            'Initially you can chose to either search within a specific shop or items across all shops.',
+        },
+        {
+          target: '#selectShop',
+          content:
+            'If you select a specific shop your search will include items from that particular shop, it\'s great if you know what you want and from where!',
+        },
+        {
+          target: '#allShops',
+          content:
+            'For this demo just select All Shops by clicking the button for now, you can go back after we\'ve run you through things and adjust your search.',
         },
       ],
     };
@@ -51,7 +61,7 @@ class App extends Component {
                 callback={(s) => console.log(s)}
                 steps={steps}
                 run={run}
-                scrollToFirstStep
+                continuous
                 showProgress
               />
               {tourDecision === null ? (
