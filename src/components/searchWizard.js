@@ -1,15 +1,23 @@
 import React, {Component} from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, InputGroup, FormControl, Col } from 'react-bootstrap';
+import {Search} from 'react-bootstrap-icons'
 
 class SearchWizard extends Component {
 
     render() {
         return (
-            <Container>
-
-
-
-            </Container>
+            <Col sm={8} className="mx-auto">
+                <InputGroup className="mb-2">
+                <InputGroup.Prepend>
+                <InputGroup.Text id="basic-addon1"><Search/></InputGroup.Text>
+                </InputGroup.Prepend>
+                <FormControl
+                placeholder="I'm shopping for..."
+                aria-label="search"
+                aria-describedby="I'm shopping for..."
+                />
+            </InputGroup>
+          </Col>
         )
     }
 }

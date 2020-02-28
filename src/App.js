@@ -7,6 +7,7 @@ import {Container, Row, Col, Button, Jumbotron, Image} from 'react-bootstrap'
 
 import Intro from './components/Intro'
 import SearchWizard from './components/searchWizard'
+import Logo from './TTHSLogo.png'
 
 class App extends Component {
   state = {
@@ -36,6 +37,9 @@ class App extends Component {
         <Container className="mainContainer align-items-center">
           <Container>
           <Jumbotron className="intro-jumbotron">
+          <Row className="justify-content-center">
+                    <Image className="logo" src={Logo} roundedCircle/>
+                </Row> 
             <Joyride 
               callback={(s)=> console.log(s)} 
               steps={this.state.steps} 
