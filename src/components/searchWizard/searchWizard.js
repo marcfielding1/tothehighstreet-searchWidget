@@ -37,7 +37,6 @@ class SearchWizard extends Component {
   }
 
   handleShopSelect(shopId) {
-    console.log(shopId);
     this.setState({ searchShop: shopId });
   }
 

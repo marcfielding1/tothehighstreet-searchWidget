@@ -36,6 +36,12 @@ class App extends Component {
             'For this demo just select All Shops by clicking the button for now, you can go back after we\'ve run you through things and adjust your search.',
           disableBeacon: true,
         },
+        {
+          target: '#postcodeInput',
+          content:
+            'Because we\'re searching all shops, we need to know where you are to find the closest results.',
+          disableBeacon: true,
+        },
       ],
     };
   }
@@ -62,7 +68,7 @@ class App extends Component {
                 <Image className="logo" src={Logo} roundedCircle />
               </Row>
               <Joyride
-                callback={(s) => console.log(s)}
+                callback={(s) => console.log('CALLBACK', s)}
                 steps={steps}
                 run={run}
                 continuous
