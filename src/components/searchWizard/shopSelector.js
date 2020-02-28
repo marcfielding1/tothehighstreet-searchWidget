@@ -17,11 +17,11 @@ class SearchBar extends Component {
   render() {
     return (
       <div>
-        <Row className="align-items-center select-button">
-          <Button id="allShops" variant="primary">Search All Shops</Button>
+        <Row className="align-items-center select-button-row">
+          <Button id="allShops" className="select-button" variant="primary">Search All Shops</Button>
         </Row>
 
-        <Row className="align-items-center select-button">
+        <Row className="align-items-center">
           <p> Or select a shop from the list to only search that particular shop</p>
         </Row>
         <Row>
@@ -35,7 +35,7 @@ class SearchBar extends Component {
                   <Card.Text>
                     {item.shopBlurb}
                   </Card.Text>
-                  <Button id="selectShop" variant="primary">SELECT</Button>
+                  <Button id="selectShop" className="select-button" variant="primary">SELECT</Button>
                 </Card.Body>
               </Card>
             </Col>
