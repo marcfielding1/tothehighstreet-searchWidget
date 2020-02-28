@@ -29,7 +29,13 @@ class Intro extends Component {
           </Col>
 
           <Col className="text-left">
-            <Button variant="danger" size="lg">
+            <Button
+              variant="danger"
+              size="lg"
+              onClick={() => {
+                this.props.declineTour();
+              }}
+            >
               No
             </Button>
           </Col>

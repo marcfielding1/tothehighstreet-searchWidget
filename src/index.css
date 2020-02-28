@@ -37,7 +37,6 @@ body > #root > div {
 }
 
 .card-img-top {
-
   margin: auto;
   width: 100px !important;
 }
@@ -50,6 +49,7 @@ body > #root > div {
 
 .select-button {
   background-color: #fcb800 !important;
+  border-color: #fcb800 !important;
 }
 .shop-card {
   padding: 1rem;

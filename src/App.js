@@ -26,7 +26,7 @@ class App extends Component {
         {
           target: '#selectShop',
           content:
-            'If you select a specific shop your search will include items from that particular shop, it\'s great if you know what you want and from where!',
+            'If you select a specific shop your search will only include items from that particular shop, it\'s great if you know what you want and from where!',
         },
         {
           target: '#allShops',
@@ -44,6 +44,7 @@ class App extends Component {
   declineTour() {
     this.setState({ tourDecision: false, run: false });
   }
+
 
   render() {
     // I've done inline logic on this for now, probably refactor so we figure out what Component to display here.

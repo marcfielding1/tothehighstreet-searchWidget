@@ -18,11 +18,11 @@ class SearchBar extends Component {
     return (
       <div>
         <Row className="align-items-center select-button-row">
-          <Button id="allShops" className="select-button" variant="primary">Search All Shops</Button>
+          <Button id="allShops" className="select-button" variant="primary" onClick={() => this.props.handleShopSelect('all')}>Search All Shops</Button>
         </Row>
 
-        <Row className="align-items-center">
-          <p> Or select a shop from the list to only search that particular shop</p>
+        <Row>
+          <p className="mx-auto"> Or select a shop from the list to only search that particular shop</p>
         </Row>
         <Row>
           { this.props.shops.map((item, index) => (
@@ -35,7 +35,7 @@ class SearchBar extends Component {
                   <Card.Text>
                     {item.shopBlurb}
                   </Card.Text>
-                  <Button id="selectShop" className="select-button" variant="primary">SELECT</Button>
+                  <Button id="selectShop" className="select-button" variant="primary" onClick={() => this.props.handleShopSelect(index)}>SELECT</Button>
                 </Card.Body>
               </Card>
             </Col>

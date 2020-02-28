@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import SearchBar from './searchBar';
 import ShopSelector from './shopSelector';
+import PostcodeSelector from './postcodeSelector';
 
 class SearchWizard extends Component {
   constructor(props) {
@@ -35,12 +36,18 @@ class SearchWizard extends Component {
     this.setState({ searchShop: index });
   }
 
+  handleShopSelect(shopId) {
+    console.log(shopId);
+    this.setState({ searchShop: shopId });
+  }
 
   render() {
     let component;
 
     if (this.state.searchShop === null) {
-      component = <ShopSelector shops={this.state.shops} selectShop={this.selectShop.bind(this)} />;
+      component = <ShopSelector handleShopSelect={this.handleShopSelect.bind(this)} shops={this.state.shops} selectShop={this.selectShop.bind(this)} />;
+    } else if (this.state.postcode === null) {
+      component = <PostcodeSelector />;
     }
 
     return (
