@@ -16,6 +16,10 @@ body > #root > div {
   display: flex;
 }
 
+.inner-container {
+  max-height: 100vh;
+}
+
 .logo {
   margin-bottom: 20px;
   width: 100px;
@@ -44,6 +48,3 @@ body > #root > div {
   align-items:center
 }
 
-.inner-container {
-  max-height: 100vh;
-}

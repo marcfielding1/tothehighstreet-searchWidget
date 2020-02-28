@@ -10,25 +10,7 @@ class SearchBar extends Component {
     super(props);
 
     this.state = {
-
-      shops: [
-        {
-          shopName: 'First Shop',
-          shopBlurb: 'This is a really great shop',
-        },
-        {
-          shopName: 'Second Shop',
-          shopBlurb: 'Another is a really great shop',
-        },
-        {
-          shopName: 'Third Shop',
-          shopBlurb: 'Another is a really great shop',
-        },
-        {
-          shopName: 'Fourth Shop',
-          shopBlurb: 'Another is a really great shop',
-        },
-      ],
+      ...this.props.shops,
     };
   }
 
@@ -43,7 +25,7 @@ class SearchBar extends Component {
           <p> Or select a shop from the list to only search that particular shop</p>
         </Row>
         <Row>
-          { this.state.shops.map((item, index) => (
+          { this.props.shops.map((item, index) => (
 
             <Col key={index} sm={4} className="mx-auto shop-list-card">
               <Card style={{ width: '18rem' }}>

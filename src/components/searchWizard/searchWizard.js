@@ -10,14 +10,33 @@ class SearchWizard extends Component {
       searchTerm: null,
       searchShop: null,
       postcode: null,
+      shops: [
+        {
+          shopName: 'First Shop',
+          shopBlurb: 'This is a really great shop',
+        },
+        {
+          shopName: 'Second Shop',
+          shopBlurb: 'Another is a really great shop',
+        },
+        {
+          shopName: 'Third Shop',
+          shopBlurb: 'Another is a really great shop',
+        },
+        {
+          shopName: 'Fourth Shop',
+          shopBlurb: 'Another is a really great shop',
+        },
+      ],
     };
   }
+
 
   render() {
     let component;
 
     if (this.state.searchShop === null) {
-      component = <ShopSelector />;
+      component = <ShopSelector shops={this.state.shops} />;
     }
 
     return (
