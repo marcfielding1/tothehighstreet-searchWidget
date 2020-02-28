@@ -22,16 +22,19 @@ class App extends Component {
           target: '#allShops',
           content:
             'Initially you can chose to either search within a specific shop or items across all shops.',
+          disableBeacon: true,
         },
         {
           target: '#selectShop',
           content:
             'If you select a specific shop your search will only include items from that particular shop, it\'s great if you know what you want and from where!',
+          disableBeacon: true,
         },
         {
           target: '#allShops',
           content:
             'For this demo just select All Shops by clicking the button for now, you can go back after we\'ve run you through things and adjust your search.',
+          disableBeacon: true,
         },
       ],
     };
