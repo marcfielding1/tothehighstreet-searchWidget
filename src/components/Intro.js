@@ -1,36 +1,42 @@
-
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Container, Row, Col, Button, Jumbotron, Image} from 'react-bootstrap'
+import {
+  Container, Row, Col, Button, Jumbotron, Image,
+} from 'react-bootstrap';
 
 class Intro extends Component {
+  render() {
+    return (
+      <div>
+        <Row className="justify-content-center">
+          <p>
+            Would you like a quick run down on how to use search on To The High
+            Street?
+          </p>
+        </Row>
+        <Row>
+          <Col className="text-right">
+            <Button
+              id="startButton"
+              variant="success"
+              size="lg"
+              onClick={() => {
+                this.props.startTour();
+              }}
+            >
+              Yes
+            </Button>
+          </Col>
 
-
-    render(){
-        console.log(this.refs)
-
-        return (
-            <div>
-
-                <Row className="justify-content-center">
-                    <p> Would you like a quick run down on how to use search on To The High Street?</p>
-
-                </Row>
-                <Row>
-                    
-                    <Col className="text-right">
-                    <Button id="startButton" variant="success" size='lg' ref="start" onClick={() => { this.props.startTour() } }>Yes</Button>
-                    </Col>
-
-                    <Col className="text-left">
-                    <Button variant="danger" size='lg'>No</Button>
-                    </Col>
-
-                </Row>
-        </div>
-
-        );
-      }
+          <Col className="text-left">
+            <Button variant="danger" size="lg">
+              No
+            </Button>
+          </Col>
+        </Row>
+      </div>
+    );
+  }
 }
 
 export default Intro;
